@@ -49,7 +49,7 @@ add_action( 'ninja_forms_save_setting_google_maps_api_key',  'save_google_maps_a
 function nf_google_maps_scripts() {
     $google_maps_api_key = Ninja_Forms()->get_setting( 'google_maps_api_key' );
     
-    wp_enqueue_script( 'google_maps_js', 'https://maps.googleapis.com/maps/api/js?key='.$google_maps_api_key.'&libraries=places', array(), '1.0.0', true );
+    //wp_enqueue_script( 'google_maps_js', 'https://maps.googleapis.com/maps/api/js?key='.$google_maps_api_key.'&libraries=places', array(), '1.0.0', true );
     wp_enqueue_script( 'nf_google_maps', plugin_dir_url( __FILE__ ) . '/js/nf-google-maps.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'nf_google_maps_scripts' );
